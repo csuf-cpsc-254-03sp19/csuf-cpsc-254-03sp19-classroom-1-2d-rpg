@@ -1,0 +1,18 @@
+Team Members:
+Victoria Naranjo, nvictoria987@csu.fullerton.edu
+Traci Trojan, tracjitrojan@csu.fullerton.edu
+Damien Mousavi, kahrenmousavi@csu.fullerton.edu
+
+Overview
+We will make a user model and a new weapon type for Gdquest. This is an open source 2d game made with Godot. 
+It has a simple movement mechanism, inventory system, shop, bosses, leveloader, and save and load system. 
+
+Goals
+-Make a user model
+-Make a weapon model
+-Code the weapon stats
+
+Resources
+Use the Godot 3.0.6 software
+Use photoshop or other software to make the user model and weapon model
+Use GitHub to connect the project pieces
