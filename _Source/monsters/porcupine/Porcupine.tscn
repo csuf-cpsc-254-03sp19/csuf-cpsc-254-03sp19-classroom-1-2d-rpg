@@ -9,7 +9,6 @@
 [ext_resource path="res://vfx/particles/dust_puffs/DustPuffs.tscn" type="PackedScene" id=7]
 [ext_resource path="res://interface/gui/lifebar/InterfaceAnchor.tscn" type="PackedScene" id=8]
 
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "SETUP"
@@ -259,7 +258,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 radius = 35.906
 
-[node name="Porcupine" type="KinematicBody2D" groups=[
+[node name="Porcupine" type="KinematicBody2D" index="0" groups=[
 "monster",
 ]]
 
@@ -269,7 +268,24 @@ collision_layer = 2
 collision_mask = 3
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Z Index" ]
+_sections_unfolded = [ "Collision", "Material", "Visibility", "Z Index" ]
+ARRIVE_DISTANCE = 6.0
+DEFAULT_SLOW_RADIUS = 200.0
+DEFAULT_MAX_SPEED = 300.0
+MASS = 8.0
+MAX_ROAM_SPEED = 200.0
+MAX_FOLLOW_SPEED = 400.0
+MAX_CHARGE_SPEED = 900.0
+SPOT_RANGE = 460.0
+FOLLOW_RANGE = 700.0
+BUMP_RANGE = 90.0
+CHARGE_RANGE = 340.0
+PREPARE_TO_CHARGE_WAIT_TIME = 0.9
+ROAM_RADIUS = 140.0
+BUMP_DISTANCE = 60.0
+BUMP_DURATION = 0.2
+MAX_BUMP_HEIGHT = 50.0
+BUMP_COOLDOWN_DURATION = 0.6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
