@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/porcupine.png-8034b65048f25f0e61302d6bff865dcc.stex"
+path="res://.import/porp.png-3df1f38000623bd42e73ab03f6bee959.stex"
 
 [deps]
 
-source_file="res://monsters/porcupine/porcupine.png"
-dest_files=[ "res://.import/porcupine.png-8034b65048f25f0e61302d6bff865dcc.stex" ]
+source_file="res://monsters/porcupine/porp.png"
+dest_files=[ "res://.import/porp.png-3df1f38000623bd42e73ab03f6bee959.stex" ]
 
 [params]
 
