@@ -11,3 +11,9 @@ func enter():
 
 func _on_Sword_combo_finished():
 	emit_signal("finished", "previous")
+
+"""
+signals combo's end
+"""
+func _on_Hammer_combo_finished():
+	emit_signal("finished", "previous")

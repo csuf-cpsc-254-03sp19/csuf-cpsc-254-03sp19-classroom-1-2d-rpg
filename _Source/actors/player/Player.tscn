@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://actors/player/PlayerController.gd" type="Script" id=1]
 [ext_resource path="res://actors/camera/ShakingCamera.tscn" type="PackedScene" id=2]
@@ -15,18 +15,19 @@
 [ext_resource path="res://actors/player/shadow.png" type="Texture" id=13]
 [ext_resource path="res://actors/weapons/sword/WeaponPivot.gd" type="Script" id=14]
 [ext_resource path="res://actors/weapons/sword/Sword.tscn" type="PackedScene" id=15]
-[ext_resource path="res://actors/player/body.png" type="Texture" id=16]
-[ext_resource path="res://interface/fonts/SourceCodePro-Bold.ttf" type="DynamicFontData" id=17]
-[ext_resource path="res://actors/player/states/debug/StateNameDisplayer.gd" type="Script" id=18]
-[ext_resource path="res://actors/health/Stats.tscn" type="PackedScene" id=19]
-[ext_resource path="res://core/shop/purse/Purse.tscn" type="PackedScene" id=20]
-[ext_resource path="res://core/inventory/Inventory.tscn" type="PackedScene" id=21]
-[ext_resource path="res://core/inventory/items/usable/potions/restore_health/MinorHealthPotion.tscn" type="PackedScene" id=22]
-[ext_resource path="res://core/inventory/items/usable/potions/restore_health/StrongHealthPotion.tscn" type="PackedScene" id=23]
-[ext_resource path="res://actors/weapons/bullet/BulletSpawner.gd" type="Script" id=24]
-[ext_resource path="res://audio/sfx/step_01.wav" type="AudioStream" id=25]
-[ext_resource path="res://audio/AudioShuffleStepSounds.gd" type="Script" id=26]
-[ext_resource path="res://actors/CoinsCollector.tscn" type="PackedScene" id=27]
+[ext_resource path="res://actors/weapons/hammer/Hammer.tscn" type="PackedScene" id=16]
+[ext_resource path="res://actors/player/body.png" type="Texture" id=17]
+[ext_resource path="res://interface/fonts/SourceCodePro-Bold.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://actors/player/states/debug/StateNameDisplayer.gd" type="Script" id=19]
+[ext_resource path="res://actors/health/Stats.tscn" type="PackedScene" id=20]
+[ext_resource path="res://core/shop/purse/Purse.tscn" type="PackedScene" id=21]
+[ext_resource path="res://core/inventory/Inventory.tscn" type="PackedScene" id=22]
+[ext_resource path="res://core/inventory/items/usable/potions/restore_health/MinorHealthPotion.tscn" type="PackedScene" id=23]
+[ext_resource path="res://core/inventory/items/usable/potions/restore_health/StrongHealthPotion.tscn" type="PackedScene" id=24]
+[ext_resource path="res://actors/weapons/bullet/BulletSpawner.gd" type="Script" id=25]
+[ext_resource path="res://audio/sfx/step_01.wav" type="AudioStream" id=26]
+[ext_resource path="res://audio/AudioShuffleStepSounds.gd" type="Script" id=27]
+[ext_resource path="res://actors/CoinsCollector.tscn" type="PackedScene" id=28]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -339,10 +340,10 @@ tracks/2/keys = {
 size = 20
 use_mipmaps = false
 use_filter = true
-font_data = ExtResource( 17 )
+font_data = ExtResource( 18 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 position = Vector2( 960, 550 )
 input_pickable = false
@@ -451,10 +452,12 @@ position = Vector2( 110, 0 )
 
 [node name="Sword" parent="BodyPivot/WeaponPivot/Offset" index="0" instance=ExtResource( 15 )]
 
+[node name="Hammer" parent="BodyPivot/WeaponPivot/Offset" index="1" instance=ExtResource( 16 )]
+
 [node name="Body" type="Sprite" parent="BodyPivot" index="1"]
 
 position = Vector2( 0, -58.8242 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="StateNameDisplayer" type="Label" parent="BodyPivot" index="2"]
@@ -483,7 +486,7 @@ uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script = ExtResource( 18 )
+script = ExtResource( 19 )
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="6"]
@@ -491,25 +494,25 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 build_mode = 0
 polygon = PoolVector2Array( -20, 0, -20, -20, 20, -20, 20, 0 )
 
-[node name="Health" parent="." index="7" instance=ExtResource( 19 )]
+[node name="Health" parent="." index="7" instance=ExtResource( 20 )]
 
-[node name="Purse" parent="." index="8" instance=ExtResource( 20 )]
+[node name="Purse" parent="." index="8" instance=ExtResource( 21 )]
 
 coins = 32
 MAXIMUM = 1000000
 
-[node name="Inventory" parent="." index="9" instance=ExtResource( 21 )]
+[node name="Inventory" parent="." index="9" instance=ExtResource( 22 )]
 
-[node name="MinorHealthPotion" parent="Inventory" index="0" instance=ExtResource( 22 )]
+[node name="MinorHealthPotion" parent="Inventory" index="0" instance=ExtResource( 23 )]
 
 amount = 4
 
-[node name="StrongHealthPotion" parent="Inventory" index="1" instance=ExtResource( 23 )]
+[node name="StrongHealthPotion" parent="Inventory" index="1" instance=ExtResource( 24 )]
 
 [node name="BulletSpawn" type="Node2D" parent="." index="10"]
 
 position = Vector2( 1.17401, -61.266 )
-script = ExtResource( 24 )
+script = ExtResource( 25 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CooldownTimer" type="Timer" parent="BulletSpawn" index="0"]
@@ -523,15 +526,15 @@ autostart = false
 
 [node name="Steps" type="AudioStreamPlayer" parent="Sfx" index="0"]
 
-stream = ExtResource( 25 )
+stream = ExtResource( 26 )
 volume_db = -16.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
-script = ExtResource( 26 )
+script = ExtResource( 27 )
 
-[node name="CoinsCollector" parent="." index="12" instance=ExtResource( 27 )]
+[node name="CoinsCollector" parent="." index="12" instance=ExtResource( 28 )]
 
 [connection signal="direction_changed" from="." to="BodyPivot/WeaponPivot" method="_on_Player_direction_changed"]
 
@@ -544,6 +547,8 @@ script = ExtResource( 26 )
 [connection signal="animation_finished" from="AnimationPlayer" to="StateMachine" method="_on_animation_finished"]
 
 [connection signal="combo_finished" from="BodyPivot/WeaponPivot/Offset/Sword" to="StateMachine/Attack" method="_on_Sword_combo_finished"]
+
+[connection signal="combo_finished" from="BodyPivot/WeaponPivot/Offset/Hammer" to="StateMachine/Attack" method="_on_Hammer_combo_finished"]
 
 [connection signal="damage_taken" from="Health" to="StateMachine" method="_on_Health_damage_taken"]
 

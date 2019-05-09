@@ -58,3 +58,14 @@ func get_inventory():
 
 func get_purse():
 	return purse
+	
+"""
+allows player to switch between the sword and hammer
+using the switchWeapon button
+"""
+func _unhandled_input(event):
+	if event.is_action_pressed('switchWeapon'):
+		if (weapon == $BodyPivot/WeaponPivot/Offset/Sword):
+			weapon = $BodyPivot/WeaponPivot/Offset/Hammer
+		else:
+			weapon = $BodyPivot/WeaponPivot/Offset/Sword
