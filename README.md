@@ -23,7 +23,7 @@
 
   ## Files changed and/or added: ##
   - project.godot
-  - actors / player / states / combat / Attack.gd
+  - actors/player/states/combat/Attack.gd
   - actors/player/body.png
   - actors/player/Player.tscn
   - actors/player/PlayerController.gd
