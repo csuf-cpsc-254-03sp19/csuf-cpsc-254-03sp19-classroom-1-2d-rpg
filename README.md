@@ -1,12 +1,50 @@
 <h1 align="center">
-  Our Read-Me</br>
-  Needs to be edited</br>
+  TEAM/PROJECT NAME:</br>
   </br>
-  </br>
-  </br>
-  Make Pro 2d Games with Godot</br>
-  <small>Open Source A-RPG Demo</small>
-</h1>
+  </h1>
+  
+  ## Team Members: ##
+  Victoria Naranjo, nvictoria987@csu.fullerton.edu
+  
+  Traci Trojan, tracitrojan@csu.fullerton.edu
+  
+  Damien Mousavi, kahrenmousavi@csu.fullerton.edu
+
+
+  ## IMPORTANT: ##
+  Look at the Instructions document in the Docs folder for instructions on how to download the Godot game engine and import and run our project successfully
+
+
+  ## Ideas changed: ##
+  - Added a theme
+  - New Weapon
+  - New character designs
+
+
+  ## Files changed and/or added: ##
+  - project.godot
+  - actors / player / states / combat / Attack.gd
+  - actors/player/body.png
+  - actors/player/Player.tscn
+  - actors/player/PlayerController.gd
+  - actors/weapons/hammer/Hammer.gd
+  - actors/weapons/hammer/Hammer.tscn
+  - actors/weapons/hammer/hammer.png
+  - actors/weapons/hammer/hammer.png.import
+  - actors/weapons/hammer/WeaponPivot.gd
+  - monsters/mosquito/mosquito.png
+  - monsters/mosquito/nest.png
+  - monsters/porcupine/Porcupine.tscn
+  - monsters/porcupine/porcupine.png
+  - monsters/porcupine/porcupine.png.import
+  - monsters/porcupine/porp.png.import
+  
+  
+  
+  ## ORIGINAL PROJECT README: ##
+
+  ## Make Pro 2d Games with Godot ##
+  Open Source A-RPG Demo
 
 <p align='center'>
   <img src="https://i.imgur.com/zW56qs0.png" alt="Banner for the project, showing the player facing the game's boss, the blue wild boar" />
