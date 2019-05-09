@@ -45,6 +45,10 @@ func fall(gap_size):
 
 func _on_Die_finished(string):
 	set_dead(true)
+	"""
+	reloads the scene to prevent invalid input error
+	"""
+	get_tree().reload_current_scene()
 
 func get_health_node():
 	return $Health
