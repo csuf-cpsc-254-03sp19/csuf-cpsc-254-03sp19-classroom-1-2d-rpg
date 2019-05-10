@@ -1,5 +1,5 @@
 <h1 align="center">
-  TEAM/PROJECT NAME:</br>
+  2D RPG Medieval Themed Game:</br>
   </br>
   </h1>
   
@@ -19,6 +19,7 @@
   - Added a theme
   - New Weapon
   - New character designs
+  - Fixed crashing after dying
 
 
   ## Files changed and/or added: ##
