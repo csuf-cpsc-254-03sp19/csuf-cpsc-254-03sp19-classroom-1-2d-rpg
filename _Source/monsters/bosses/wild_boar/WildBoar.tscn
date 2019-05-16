@@ -443,7 +443,7 @@ playback/speed = 1.0
 
 [node name="Stats" parent="." index="3" instance=ExtResource( 6 )]
 
-max_health = 120
+max_health = 50
 
 [node name="StateMachine" type="Node" parent="." index="4"]
 
