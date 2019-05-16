@@ -46,7 +46,7 @@ func fall(gap_size):
 func _on_Die_finished(string):
 	set_dead(true)
 	"""
-	reloads the scene to prevent invalid input error
+	RELOADS SCENE TO PREVENT INVALID INPUT ERROR -Damien
 	"""
 	get_tree().reload_current_scene()
 
@@ -60,8 +60,8 @@ func get_purse():
 	return purse
 	
 """
-allows player to switch between the sword and hammer
-using the switchWeapon button
+ALLOWS PLAYER TO SWITCH BETWEEN SWORD AND HAMMER
+USING THE SWITCHWEAPON BUTTON -Damien
 """
 func _unhandled_input(event):
 	if event.is_action_pressed('switchWeapon'):

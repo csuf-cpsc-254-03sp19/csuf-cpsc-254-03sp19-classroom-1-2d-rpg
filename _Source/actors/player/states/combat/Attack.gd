@@ -13,7 +13,8 @@ func _on_Sword_combo_finished():
 	emit_signal("finished", "previous")
 
 """
-signals combo's end
+SIGNALS THE END OF COMBO TO THE REST OF THE SCRIPTS
+IN THE OBJECT -Damien
 """
 func _on_Hammer_combo_finished():
 	emit_signal("finished", "previous")

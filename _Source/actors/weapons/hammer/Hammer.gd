@@ -1,5 +1,8 @@
 extends "res://actors/DamageSource.gd"
-
+"""
+USED SAME TEMPLATE AS SWORD WITH CHANGED ATTRIBUTES, ANIMATION SPEED
+AND MODEL. -Damien
+"""
 signal combo_finished()
 
 enum States { IDLE, ATTACK }
